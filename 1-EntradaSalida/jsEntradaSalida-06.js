@@ -10,7 +10,7 @@ function sumar()
 	//mivariable = mivariable + mivariabletwo;
 	//alert(mivariable);
 	mivariable = document.getElementById('txtIdNumeroUno').value;
-	mivariabletwo= document.getElementById('txtIdNumeroDos').value;
+	mivariabletwo = document.getElementById('txtIdNumeroDos').value;
 	const parsed = parseInt(mivariable);
 	const ropa = parseInt(mivariabletwo);
 	alert(parsed + ropa);
