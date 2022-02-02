@@ -6,6 +6,7 @@ function mostrar()
 	var variableDos;
 	variableUno = document.getElementById('txtIdNombre').value;
 	variableDos = document.getElementById('txtIdEdad').value;
-	alert(variableUno +  variableDos);
+	alert('mi nombre es ' + variableUno + ' y tengo ' + variableDos + ' años');
 }
 
+   
