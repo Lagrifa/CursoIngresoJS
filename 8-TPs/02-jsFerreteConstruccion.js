@@ -8,7 +8,7 @@ function Rectangulo ()
 {
   let largo;
   let ancho;
-  let cantAlambreRectan
+  let cantAlambreRectan;
 
   largo = document.getElementById("txtIdLargo").value;
   ancho = document.getElementById("txtIdAncho").value;
@@ -30,7 +30,7 @@ function Circulo ()
 
 	radio = parseInt(radio);
 
-	cantAlambreCirc = (radio * 3.14) * 3;
+	cantAlambreCirc = (2 * 3.14 * radio) * 3;
 
 	alert("debe comprar " + cantAlambreCirc + " metros de alambre");
 }
@@ -41,6 +41,7 @@ function Materiales ()
 	let ancho;
 	let cantBolsasCal;
 	let cantBolsasCemento;
+	let calcArea;
 
 	largo = document.getElementById("txtIdLargo").value;
 	ancho = document.getElementById("txtIdAncho").value;
@@ -48,8 +49,9 @@ function Materiales ()
 	largo = parseInt(largo);
 	ancho = parseInt(ancho);
 
-	cantBolsasCal = (largo * 4);
-	cantBolsasCemento = (ancho * 6);
+  calcArea = (largo * ancho);
+	cantBolsasCal = (calcArea * 3);
+	cantBolsasCemento = (calcArea * 2);
 
 	alert("segun las medidas debe comprar " + cantBolsasCal + " bolsas de cal");
 	alert("segun las medidas debe comprar " + cantBolsasCemento + " bolsas de cemento");
