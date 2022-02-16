@@ -27,9 +27,9 @@ function mostrarAumento()
 
      porcentajeIngre = parseInt(porcentajeIngre);
        
-     resultAumento = (importe1 *porcentajeIngre /100);
+     resultAumento = (importe1 * porcentajeIngre /100);
 
-     sueldoAumento = importe1 - resultAumento;
+     sueldoAumento = importe1 + resultAumento;
 
      document.getElementById("txtIdResultado").value = sueldoAumento;
 
