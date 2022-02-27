@@ -1,26 +1,52 @@
-/*Al ingresar una edad debemos informar si la persona
- es mayor de edad (mas de 18 años) o adolescente (entre 13 y 17 años) o niño (menor a 13 años).*/
+/*
+Ejercicio 6 bis(usar if else):
+Al ingresar por prompt una edad debemos informar si
+la persona es anciano(mas de 70), mayor de edad (entre 70 y 18 años),
+adolescente (entre 13 y 17 años), niño (menor a 13 años), bebe (0 a 3 años).
+mostrar por ID el resultado.
+*/
 
 
 function mostrar()
 {
-	var edad;
+	var edadIng;
+	var edadMostrada;
 
-	edad = parseInt(document.getElementById("txtIdEdad").value);
+	edadIng = parseInt(edadIng);
+	edadIng = prompt("ingrese una edad");
 
-	if(edad > 17 )
+	if(edadIng > 70)
 	{
-		alert("sos mayor de edad");
+		edadMostrada = ("usted es anciano");
 	}
 	else
 	{
-		if(edad > 12 && edad < 18)
-	    {
-          alert("sos adolescente");
-	    }
-	    else{
-
-	    	alert("sos niño");
-	    }
+		if(edadIng > 17 && edadIng < 71)
+		{
+			edadMostrada = ("usted es mayor de edad");
+		}
+		else
+		{
+			if(edadIng > 12 && edadIng < 18)
+			{
+				edadMostrada = ("usted es adolescente");
+			}
+			else
+			{
+				if(edadIng > 2 && edadIng < 13)
+				{
+					edadMostrada = ("usted es un niño");
+				}
+				else
+				{
+					if(edadIng >= 0 && edadIng < 4) // no es necesario por que es por descarte los numeros restantes.
+					{
+						edadMostrada = ("usted es un bebe");
+					}			
+				}
+			}
+		}
 	}
+
+	document.getElementById("txtIdEdad").value = edadMostrada;
 }
